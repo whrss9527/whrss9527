@@ -19,7 +19,7 @@
 
 - ⚡ Go / Kotlin / JAVA / Shell / JavaScript / CI/CD / ..
 - ✍️ [Blogger](https://whrss.com)
-- 📫 [![Gmail Badge](https://img.shields.io/badge/-163%20mail-c14438?style=flat-square&logo=163mail&logoColor=white&link=mailto:moorekang@gmail.com)](mailto:18334591129@163.com)
+- 📫 [![Gmail Badge](https://img.shields.io/badge/-Gmail-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:moorekang@gmail.com)](mailto:whrss9527@gmail.com)
 
 </td>
 </tr>
