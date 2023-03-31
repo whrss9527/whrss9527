@@ -16,6 +16,10 @@ env:
   GITHUB_EMAIL: whrss9527@gmail.com
 
 jobs:
+  print-workflow-id:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo ${{ github.workflow }}
   sync:
     name: Build
     runs-on: ubuntu-latest
