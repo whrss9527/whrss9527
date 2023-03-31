@@ -52,6 +52,8 @@ jobs:
           python main.py $'${{ github.event.inputs.time }}' $'${{ github.event.inputs.value }}'
 
       - name: Push README
+        env: 
+          TOKEN: ${{ secrets.ASSESS_TOKEN }}
         run: |
           git config --local user.email "${{ env.GITHUB_EMAIL }}"
           git config --local user.name "${{ env.GITHUB_NAME }}"
