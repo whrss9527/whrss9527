@@ -1,5 +1,4 @@
-name: Replace README AND GENERATE SVG
-
+name: whrss9527
 on:
   workflow_dispatch:
     inputs:
