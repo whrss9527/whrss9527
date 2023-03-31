@@ -12,7 +12,7 @@ on:
 env:
   # change env here
   GITHUB_NAME: whrsss
-  GITHUB_EMAIL: whrss9527@gmail.com
+  GITHUB_EMAIL: 1593774151@qq.com
 
 jobs:
   print-workflow-id:
