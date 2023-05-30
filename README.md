@@ -66,8 +66,11 @@
 ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
 ![GitLab](https://img.shields.io/badge/gitlab-%23181717.svg?style=for-the-badge&logo=gitlab&logoColor=white)
 
-我的运动
-![](https://raw.githubusercontent.com/whrsss/GitHubPoster/main/OUT_FOLDER/apple_health.svg)
+---
+
+#### 我的运动(github action 自动更新)
+
+![我的运动数据](https://raw.githubusercontent.com/whrsss/GitHubPoster/main/OUT_FOLDER/apple_health.svg)
 
 ---
 
