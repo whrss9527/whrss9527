@@ -36,8 +36,9 @@
 ![JavaScript](https://img.shields.io/badge/JavaScript-3670A0?style=for-the-badge&logo=JavaScript&logoColor=ffdd54)
 ![svelte](https://img.shields.io/badge/svelte-%2300599C.svg?style=for-the-badge&logo=svelte&logoColor=white)
 ![Shell](https://img.shields.io/badge/Shell-%23000000.svg?style=for-the-badge&logo=Shell&logoColor=white)
-![python](https://img.shields.io/badge/python-%23000000.svg?style=for-the-badge&logo=python&logoColor=white)
 ![vue](https://img.shields.io/badge/vue-85EA2D?style=for-the-badge&logo=vue&logoColor=white)
+![python](https://img.shields.io/badge/python-%23000000.svg?style=for-the-badge&logo=python&logoColor=white)
+
 
 <!-- Tools -->
 
