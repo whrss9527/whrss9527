@@ -43,7 +43,7 @@
 
 ![Obsidian](https://img.shields.io/badge/Obsidian-%23000000.svg?style=for-the-badge&logo=Obsidian&logoColor=white)
 ![Arc](https://img.shields.io/badge/Arc-FF6C37?style=for-the-badge&logo=arc&logoColor=white)
-![GPT](https://img.shields.io/badge/gpt-85EA2D?style=for-the-badge&logo=Gpt&logoColor=white)
+![GPT](https://img.shields.io/badge/GPT-85EA2D?style=for-the-badge&logo=GPT&logoColor=white)
 ![Swagger](https://img.shields.io/badge/Swagger-85EA2D?style=for-the-badge&logo=Swagger&logoColor=white)
 ![Confluence](https://img.shields.io/badge/confluence-%23172BF4.svg?style=for-the-badge&logo=confluence&logoColor=white)
 ![Jira](https://img.shields.io/badge/jira-%230A0FFF.svg?style=for-the-badge&logo=jira&logoColor=white)
