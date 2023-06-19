@@ -42,14 +42,13 @@
 <!-- Tools -->
 
 ![Obsidian](https://img.shields.io/badge/Obsidian-%23000000.svg?style=for-the-badge&logo=Obsidian&logoColor=white)
-![Arc](https://img.shields.io/badge/Arc-FF6C37?style=for-the-badge&logo=arc&logoColor=white)
 ![GPT](https://img.shields.io/badge/GPT-85EA2D?style=for-the-badge&logo=GPT&logoColor=white)
-![Swagger](https://img.shields.io/badge/Swagger-85EA2D?style=for-the-badge&logo=Swagger&logoColor=white)
+![Arc](https://img.shields.io/badge/Arc-FF6C37?style=for-the-badge&logo=arc&logoColor=white)
 ![Confluence](https://img.shields.io/badge/confluence-%23172BF4.svg?style=for-the-badge&logo=confluence&logoColor=white)
+![Swagger](https://img.shields.io/badge/Swagger-85EA2D?style=for-the-badge&logo=Swagger&logoColor=white)
 ![Jira](https://img.shields.io/badge/jira-%230A0FFF.svg?style=for-the-badge&logo=jira&logoColor=white)
 
 <!-- DB -->
-
 ![Mongo](https://img.shields.io/badge/Mongo-%2307405e.svg?style=for-the-badge&logo=Mongo&logoColor=white)
 ![Redis](https://img.shields.io/badge/redis-%23DD0031.svg?style=for-the-badge&logo=redis&logoColor=white)
 ![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
