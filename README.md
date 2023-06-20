@@ -18,7 +18,7 @@
   I'm actively looking for a job ![go](https://user-images.githubusercontent.com/54488712/217738525-f9d63cf6-f383-49e1-ba70-aef0e5978c08.png)
 
 
-- ⚡ Go / Kotlin / JAVA / Shell / JavaScript / CI/CD / ..
+- ⚡ Go / Kotlin / JAVA / Shell / JavaScript / CI&CD / ..
 - ✍️ [Blogger](https://whrss.com)
 - 📫 [![Gmail Badge](https://img.shields.io/badge/-Gmail-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:moorekang@gmail.com)](mailto:whrss9527@gmail.com)
 
