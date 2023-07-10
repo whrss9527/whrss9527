@@ -78,21 +78,3 @@
 ![我的运动数据](https://raw.githubusercontent.com/whrsss/GitHubPoster/main/OUT_FOLDER/apple_health.svg)
 
 ---
-#### 我的心跳(github action 自动更新)
-![](./files/heart.svg)
-
-<!--START_SECTION:my_heart_rate-->
-| Time | Rate | 
- | ---- | ---- | 
-| 2023年7月10日 下午1:41 | 75 |
-| 2023年7月10日 下午1:39 | 83 |
-| 2023年7月10日 下午1:31 | 127 |
-| 2023年7月10日 下午1:27 | 73 |
-| 2023年7月10日 下午1:26 | 101 |
-| 2023年7月10日 下午1:22 | 95 |
-| 2023年7月10日 下午1:15 | 60 |
-| 2023年7月10日 下午1:11 | 60 |
-| 2023年7月10日 下午1:05 | 63 |
-| 2023年7月10日 下午1:04 | 63 |
-
-<!--END_SECTION:my_heart_rate-->
