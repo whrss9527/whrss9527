@@ -74,6 +74,6 @@
 
 #### 我的运动(github action 自动更新)
 
-![我的运动数据](https://raw.githubusercontent.com/whrsss/GitHubPoster/main/OUT_FOLDER/apple_health.svg)
+![我的运动数据](https://raw.githubusercontent.com/whrsss/GitHubPoster/main/OUT_FOLDER/AppleHealthData.svg)
 
 ---
