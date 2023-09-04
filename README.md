@@ -3,7 +3,7 @@
 <td>
 
 
-![我的 GitHub 数据](https://statistics-git-main-whrsss.vercel.app/api?username=whrsss&rank_icon=github&count_private=false)
+![我的 GitHub 数据](https://statistics-git-main-whrsss.vercel.app/api?username=whrss9527&rank_icon=github&count_private=false)
 
 
 
