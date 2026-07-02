@@ -10,9 +10,8 @@ on:
         required: false
 
 env:
-  # change env here
-  GITHUB_NAME: whrsss
-  GITHUB_EMAIL: 1593774151@qq.com
+  GITHUB_NAME: github-actions[bot]
+  GITHUB_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
 
 jobs:
   print-workflow-id:
