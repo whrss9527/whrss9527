@@ -27,48 +27,36 @@
 
 ### 💻Tech Stack
 
-<!-- Program language -->
+<!-- Languages -->
+![Go](https://img.shields.io/badge/Go-%2300ADD8.svg?style=for-the-badge&logo=go&logoColor=white)
+![Kotlin](https://img.shields.io/badge/Kotlin-%237F52FF.svg?style=for-the-badge&logo=kotlin&logoColor=white)
+![Java](https://img.shields.io/badge/Java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
+![Python](https://img.shields.io/badge/Python-%233776AB.svg?style=for-the-badge&logo=python&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![Shell](https://img.shields.io/badge/Shell-%234EAA25.svg?style=for-the-badge&logo=gnubash&logoColor=white)
 
-![Go](https://img.shields.io/badge/go-%2300ADD8.svg?style=for-the-badge&logo=go&logoColor=white)
-![Kotlin](https://img.shields.io/badge/Kotlin-%23363636.svg?style=for-the-badge&logo=Kotlin&logoColor=white)
-![Markdown](https://img.shields.io/badge/markdown-%23000000.svg?style=for-the-badge&logo=markdown&logoColor=white)
-![Java](https://img.shields.io/badge/Java-%23007ACC.svg?style=for-the-badge&logo=Java&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-3670A0?style=for-the-badge&logo=JavaScript&logoColor=ffdd54)
-![svelte](https://img.shields.io/badge/svelte-%2300599C.svg?style=for-the-badge&logo=svelte&logoColor=white)
-![Shell](https://img.shields.io/badge/Shell-%23000000.svg?style=for-the-badge&logo=Shell&logoColor=white)
-![vue](https://img.shields.io/badge/vue-85EA2D?style=for-the-badge&logo=vue&logoColor=white)
-![python](https://img.shields.io/badge/python-%23000000.svg?style=for-the-badge&logo=python&logoColor=white)
+<!-- Backend & middleware -->
+![gRPC](https://img.shields.io/badge/gRPC-%23244C5A.svg?style=for-the-badge)
+![MySQL](https://img.shields.io/badge/MySQL-%234479A1.svg?style=for-the-badge&logo=mysql&logoColor=white)
+![Redis](https://img.shields.io/badge/Redis-%23FF4438.svg?style=for-the-badge&logo=redis&logoColor=white)
+![Apache Kafka](https://img.shields.io/badge/Apache%20Kafka-%23231F20.svg?style=for-the-badge&logo=apachekafka&logoColor=white)
+![AWS SQS](https://img.shields.io/badge/AWS%20SQS-%23FF9900.svg?style=for-the-badge)
+![MongoDB](https://img.shields.io/badge/MongoDB-%2347A248.svg?style=for-the-badge&logo=mongodb&logoColor=white)
 
+<!-- Deploy & observability -->
+![Docker](https://img.shields.io/badge/Docker-%232496ED.svg?style=for-the-badge&logo=docker&logoColor=white)
+![Nomad](https://img.shields.io/badge/Nomad-%2300CA8E.svg?style=for-the-badge&logo=nomad&logoColor=white)
+![Jenkins](https://img.shields.io/badge/Jenkins-%23D24939.svg?style=for-the-badge&logo=jenkins&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-%23326CE5.svg?style=for-the-badge&logo=kubernetes&logoColor=white)
+![OpenTelemetry](https://img.shields.io/badge/OpenTelemetry-%23425CC7.svg?style=for-the-badge&logo=opentelemetry&logoColor=white)
+![Prometheus](https://img.shields.io/badge/Prometheus-%23E6522C.svg?style=for-the-badge&logo=prometheus&logoColor=white)
 
 <!-- Tools -->
-
-![Obsidian](https://img.shields.io/badge/Obsidian-%23000000.svg?style=for-the-badge&logo=Obsidian&logoColor=white)
-![GPT](https://img.shields.io/badge/GPT-85EA2D?style=for-the-badge&logo=GPT&logoColor=white)
-![Arc](https://img.shields.io/badge/Arc-FF6C37?style=for-the-badge&logo=arc&logoColor=white)
-![Confluence](https://img.shields.io/badge/confluence-%23172BF4.svg?style=for-the-badge&logo=confluence&logoColor=white)
-![Swagger](https://img.shields.io/badge/Swagger-85EA2D?style=for-the-badge&logo=Swagger&logoColor=white)
-![Jira](https://img.shields.io/badge/jira-%230A0FFF.svg?style=for-the-badge&logo=jira&logoColor=white)
-
-<!-- DB -->
-![Mongo](https://img.shields.io/badge/Mongo-%2307405e.svg?style=for-the-badge&logo=Mongo&logoColor=white)
-![Redis](https://img.shields.io/badge/redis-%23DD0031.svg?style=for-the-badge&logo=redis&logoColor=white)
-![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
-![Oss](https://img.shields.io/badge/Oss-%2307405e.svg?style=for-the-badge&logo=Oss&logoColor=white)
-
-<!-- Devops -->
-![Kubernetes](https://img.shields.io/badge/kubernetes-%23326ce5.svg?style=for-the-badge&logo=kubernetes&logoColor=white)
-![Jenkins](https://img.shields.io/badge/jenkins-%232C5263.svg?style=for-the-badge&logo=jenkins&logoColor=white)
-![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
-![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
-![Gradle](https://img.shields.io/badge/Gradle-%23000000.svg?style=for-the-badge&logo=Gradle&logoColor=white)
-![Nexus](https://img.shields.io/badge/Nexus-%232C8EBB.svg?style=for-the-badge&logo=Nexus&logoColor=white)
-
-
-<!-- Version control -->
-
-![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
-![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
-![GitLab](https://img.shields.io/badge/gitlab-%23181717.svg?style=for-the-badge&logo=gitlab&logoColor=white)
+![Git](https://img.shields.io/badge/Git-%23F03C2E.svg?style=for-the-badge&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-%23181717.svg?style=for-the-badge&logo=github&logoColor=white)
+![GitLab](https://img.shields.io/badge/GitLab-%23FC6D26.svg?style=for-the-badge&logo=gitlab&logoColor=white)
+![Obsidian](https://img.shields.io/badge/Obsidian-%237C3AED.svg?style=for-the-badge&logo=obsidian&logoColor=white)
+![Claude](https://img.shields.io/badge/Claude-%23D97757.svg?style=for-the-badge&logo=claude&logoColor=white)
 
 ---
 
