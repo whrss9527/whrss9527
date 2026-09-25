@@ -1,0 +1,29 @@
+name: Update blog posts
+
+on:
+  schedule:
+    # 09:17 Beijing time
+    - cron: "17 1 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Update README
+        run: python3 .github/scripts/update_blog_posts.py
+
+      - name: Commit and push
+        run: |
+          git diff --quiet README.md && exit 0
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Update latest blog posts" README.md
+          # the poster workflow also pushes to master
+          git pull --rebase
+          git push
