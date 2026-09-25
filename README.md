@@ -8,18 +8,18 @@
 
 
 ![Profile View Counter](https://komarev.com/ghpvc/?username=whrsss)
-[![GitHub](https://img.shields.io/badge/dynamic/json?logo=github&label=GitHub&labelColor=495867&color=495867&query=%24.data.totalSubs&url=https%3A%2F%2Fapi.spencerwoo.com%2Fsubstats%2F%3Fsource%3Dgithub%26queryKey%3Dwhrsss&style=flat-square)](https://github.com/whrsss)
+[![GitHub](https://img.shields.io/badge/dynamic/json?logo=github&label=GitHub&labelColor=495867&color=495867&query=%24.data.totalSubs&url=https%3A%2F%2Fapi.spencerwoo.com%2Fsubstats%2F%3Fsource%3Dgithub%26queryKey%3Dwhrss9527&style=flat-square)](https://github.com/whrss9527)
 [![RSS](https://img.shields.io/badge/dynamic/json?logo=rss&logoColor=white&label=RSS&labelColor=95B8D1&color=95B8D1&query=%24.data.totalSubs&url=https%3A%2F%2Fapi.spencerwoo.com%2Fsubstats%2F%3Fsource%3Dfeedly%257Cinoreader%257CfeedsPub%26queryKey%3Dhttps://whrss.com/feed&style=flat-square)](https://whrss.com/)
 
 </td>
 <td>
   
-  I'm actively looking for a job ![go](https://user-images.githubusercontent.com/54488712/217738525-f9d63cf6-f383-49e1-ba70-aef0e5978c08.png)
+  ![go](https://user-images.githubusercontent.com/54488712/217738525-f9d63cf6-f383-49e1-ba70-aef0e5978c08.png)
 
 
 - ⚡ Go / Kotlin / JAVA / Shell / JavaScript / CI & CD / ..
 - ✍️ [Blogger](https://whrss.com)
-- 📫 [![Gmail Badge](https://img.shields.io/badge/-Gmail-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:moorekang@gmail.com)](mailto:whrss9527@gmail.com)
+- 📫 [![Gmail Badge](https://img.shields.io/badge/-Gmail-c14438?style=flat-square&logo=Gmail&logoColor=white)](mailto:whrss9527@gmail.com)
 
 </td>
 </tr>
@@ -72,7 +72,7 @@
 
 ---
 
-#### 我的运动([github action 自动更新](http://whrss.com/post/github-poster))
+#### 我的运动([github action 自动更新](https://whrss.com/posts/github-poster))
 
 ![我的运动数据](https://raw.githubusercontent.com/whrss9527/whrss9527/master/AppleHealthData.svg)
 ---
