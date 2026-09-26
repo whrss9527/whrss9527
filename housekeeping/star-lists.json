@@ -1,0 +1,98 @@
+{
+  "_说明": [
+    "stars.py 用这份规则给每个 star 打分：topic 命中 +3，关键词出现在仓库名 +2、只出现在描述 +1，主语言命中 +2。",
+    "每个仓库进得分最高的一个 List，同分时排在前面的 List 优先；得分低于 min_score 的进 fallback（设为 null 则不归类）。",
+    "英文关键词按整词匹配（go 不会匹配 google），中文按子串匹配。",
+    "overrides 手动指定个别仓库：\"owner/repo\": [\"List 名\", ...]，可以写多个 List，写 [] 表示不归类。",
+    "只有分到仓库的 List 才会被创建；private 为 true 的 List 只有自己能看到。"
+  ],
+  "min_score": 2,
+  "lists": [
+    {
+      "name": "🤖 AI 与大模型",
+      "description": "LLM 应用、Agent、MCP、提示词与各类 AI 工具",
+      "topics": ["ai", "llm", "llms", "gpt", "gpt-4", "chatgpt", "openai", "claude", "claude-code", "anthropic", "gemini", "deepseek", "ollama", "llama", "rag", "agent", "agents", "ai-agent", "ai-agents", "mcp", "mcp-server", "model-context-protocol", "langchain", "prompt-engineering", "chatbot", "machine-learning", "deep-learning", "stable-diffusion", "aigc", "copilot", "whisper", "tts", "text-to-speech", "embeddings", "vector-database", "generative-ai", "artificial-intelligence", "nlp"],
+      "keywords": ["ai", "llm", "gpt", "chatgpt", "openai", "claude", "anthropic", "gemini", "deepseek", "ollama", "agent", "mcp", "rag", "langchain", "prompt", "chatbot", "copilot", "aigc", "whisper", "stable diffusion", "大模型", "人工智能", "智能体", "提示词", "model context protocol"]
+    },
+    {
+      "name": "🌐 网络与代理",
+      "description": "代理、隧道、DNS、内网穿透与分流规则",
+      "topics": ["proxy", "vpn", "clash", "clash-meta", "mihomo", "v2ray", "xray", "sing-box", "shadowsocks", "trojan", "vless", "vmess", "hysteria", "hysteria2", "wireguard", "tunnel", "socks5", "http-proxy", "dns", "doh", "adblock", "adguard", "frp", "nps", "tailscale", "zerotier", "cloudflare-workers", "gfw", "surge", "quantumult-x", "loon", "stash", "shadowrocket", "networking"],
+      "keywords": ["proxy", "vpn", "clash", "mihomo", "v2ray", "xray", "sing-box", "shadowsocks", "trojan", "vless", "wireguard", "tunnel", "tailscale", "zerotier", "frp", "dns", "adblock", "surge", "quantumult", "代理", "隧道", "内网穿透", "分流", "去广告", "翻墙", "科学上网", "订阅转换", "节点"]
+    },
+    {
+      "name": "🏗️ 后端与架构",
+      "description": "数据库、缓存、消息队列、RPC、微服务、分布式与系统设计",
+      "topics": ["backend", "database", "databases", "sql", "nosql", "mysql", "postgresql", "postgres", "sqlite", "redis", "mongodb", "elasticsearch", "clickhouse", "tidb", "etcd", "kafka", "rabbitmq", "rocketmq", "pulsar", "nats", "mq", "message-queue", "grpc", "protobuf", "rpc", "thrift", "microservice", "microservices", "distributed-systems", "distributed", "raft", "paxos", "consensus", "cache", "caching", "orm", "sharding", "api-gateway", "service-mesh", "system-design", "high-concurrency", "high-performance", "event-sourcing", "cqrs", "ddd", "domain-driven-design", "architecture", "software-architecture", "scalability", "time-series", "olap", "search-engine", "storage", "object-storage", "websocket", "rest-api", "openapi", "oauth2", "authentication", "jwt", "rate-limiter", "circuit-breaker", "distributed-lock", "payment", "service-discovery", "service-registry", "config-center"],
+      "keywords": ["database", "mysql", "postgres", "postgresql", "sqlite", "redis", "mongodb", "elasticsearch", "kafka", "rabbitmq", "grpc", "protobuf", "rpc", "microservice", "microservices", "distributed", "raft", "etcd", "sharding", "orm", "api gateway", "system design", "message queue", "rate limit", "payment", "数据库", "缓存", "消息队列", "分布式", "微服务", "高并发", "高可用", "系统设计", "架构", "分库分表", "限流", "熔断", "事务", "支付", "service discovery", "服务发现", "注册中心", "配置中心"]
+    },
+    {
+      "name": "☁️ 云原生与运维",
+      "description": "容器、K8s、CI/CD、监控可观测、部署与自托管",
+      "topics": ["docker", "dockerfile", "docker-compose", "kubernetes", "k8s", "helm", "container", "containers", "nomad", "consul", "terraform", "ansible", "devops", "ci", "cd", "ci-cd", "cicd", "github-actions", "gitlab-ci", "jenkins", "argocd", "gitops", "monitoring", "observability", "prometheus", "grafana", "opentelemetry", "tracing", "logging", "metrics", "alerting", "apm", "self-hosted", "selfhosted", "homelab", "nas", "serverless", "cloud", "cloud-native", "aws", "cloudflare", "vercel", "nginx", "caddy", "traefik", "reverse-proxy", "load-balancer", "linux", "sre", "deployment", "infrastructure-as-code"],
+      "keywords": ["docker", "kubernetes", "k8s", "helm", "nomad", "terraform", "ansible", "devops", "ci/cd", "github actions", "jenkins", "prometheus", "grafana", "opentelemetry", "self-hosted", "homelab", "nas", "serverless", "nginx", "caddy", "traefik", "linux", "监控", "可观测", "自托管", "自部署", "云原生", "运维", "部署"]
+    },
+    {
+      "name": "🧰 效率工具",
+      "description": "命令行、终端、编辑器、macOS / Windows 应用与各类效率工具",
+      "topics": ["cli", "command-line", "command-line-tool", "terminal", "tui", "shell", "bash", "zsh", "fish", "tmux", "vim", "neovim", "nvim", "vscode", "vscode-extension", "jetbrains", "intellij-plugin", "editor", "ide", "macos", "macos-app", "mac", "homebrew", "windows", "alfred", "alfred-workflow", "raycast", "raycast-extension", "obsidian", "obsidian-plugin", "notion", "markdown", "markdown-editor", "note-taking", "productivity", "dotfiles", "git", "keyboard", "hotkey", "window-manager", "clipboard", "screenshot", "ocr", "translation", "translator", "downloader", "file-manager", "launcher", "menubar", "menu-bar", "browser-extension", "chrome-extension", "userscript", "tampermonkey", "diagram", "diagrams", "whiteboard", "drawing", "mind-map"],
+      "keywords": ["cli", "terminal", "tui", "shell", "zsh", "vim", "neovim", "vscode", "macos", "mac", "windows", "alfred", "raycast", "obsidian", "notion", "markdown", "productivity", "dotfiles", "git", "ocr", "extension", "menu bar", "终端", "命令行", "效率", "快捷键", "剪贴板", "截图", "翻译", "下载", "浏览器插件", "油猴", "菜单栏", "工具", "diagram", "whiteboard", "画图", "白板", "思维导图"]
+    },
+    {
+      "name": "📝 博客与内容",
+      "description": "博客程序与主题、RSS、评论系统、个人主页与阅读",
+      "topics": ["blog", "blogging", "blog-engine", "static-site-generator", "static-site", "ssg", "hexo", "hexo-theme", "hugo", "hugo-theme", "jekyll", "jekyll-theme", "vitepress", "vuepress", "docusaurus", "astro", "astro-theme", "gatsby", "valaxy", "ghost", "wordpress", "halo", "typecho", "theme", "rss", "rss-reader", "rss-feed", "feed", "feed-reader", "atom", "rsshub", "newsletter", "comments", "comment-system", "giscus", "utterances", "waline", "twikoo", "profile-readme", "github-profile", "github-profile-readme", "readme", "readme-stats", "portfolio", "personal-website", "photography", "photo-gallery", "gallery", "reading", "kindle", "epub", "weread", "podcast", "cms", "writing"],
+      "keywords": ["blog", "rss", "feed", "hexo", "hugo", "jekyll", "vitepress", "astro", "theme", "giscus", "utterances", "waline", "twikoo", "profile", "readme", "portfolio", "photo", "gallery", "kindle", "epub", "podcast", "newsletter", "cms", "博客", "独立博客", "主题", "评论", "个人主页", "个人网站", "相册", "读书", "微信读书", "播客", "周刊", "写作"]
+    },
+    {
+      "name": "📚 学习资料",
+      "description": "教程、书籍、面试、算法、Awesome 清单与路线图",
+      "topics": ["awesome", "awesome-list", "awesome-lists", "tutorial", "tutorials", "book", "books", "course", "courses", "learning", "learn", "education", "interview", "interview-questions", "interview-preparation", "leetcode", "leetcode-solutions", "algorithm", "algorithms", "data-structures", "data-structure", "roadmap", "cheatsheet", "cheat-sheet", "guide", "handbook", "study", "design-patterns", "computer-science", "programming-books", "free-programming-books"],
+      "keywords": ["awesome", "tutorial", "guide", "handbook", "book", "books", "interview", "leetcode", "algorithm", "algorithms", "roadmap", "cheatsheet", "course", "教程", "学习", "入门", "指南", "手册", "书籍", "电子书", "面试", "面经", "刷题", "算法", "数据结构", "路线", "速查", "课程", "设计模式", "软考", "考试", "备考", "八股", "源码", "笔记", "知识", "learn", "learning", "图解", "操作系统", "计算机网络", "计算机基础"]
+    },
+    {
+      "name": "🎨 前端与设计",
+      "description": "前端框架、UI 组件、CSS、图标字体、可视化与设计资源",
+      "topics": ["frontend", "front-end", "react-components", "tailwindcss", "tailwind", "css", "css3", "scss", "sass", "html", "html5", "ui", "ui-components", "ui-library", "component-library", "components", "design-system", "figma", "icons", "icon", "iconfont", "font", "fonts", "typography", "animation", "animations", "threejs", "three-js", "webgl", "canvas", "svg", "d3", "chart", "charts", "visualization", "data-visualization", "echarts", "web-components", "shadcn", "shadcn-ui", "landing-page", "admin-dashboard", "admin-template", "ui-design", "web-design"],
+      "keywords": ["frontend", "react", "vue", "nextjs", "next.js", "svelte", "tailwind", "css", "ui", "component", "components", "icon", "icons", "font", "fonts", "figma", "animation", "chart", "charts", "echarts", "d3", "前端", "组件", "图标", "字体", "动画", "可视化", "管理后台", "nuxt", "angular", "vite", "webpack", "设计资源", "配色"]
+    },
+    {
+      "name": "📱 移动与客户端",
+      "description": "Android、iOS、鸿蒙、Flutter、小程序与桌面客户端",
+      "topics": ["android", "android-app", "android-library", "ios", "ios-app", "swift", "swiftui", "objective-c", "flutter", "dart", "react-native", "harmonyos", "openharmony", "arkts", "arkui", "kotlin-multiplatform", "jetpack-compose", "mobile", "mobile-app", "miniprogram", "wechat-miniprogram", "uniapp", "uni-app", "taro", "electron", "tauri", "desktop-app", "wails"],
+      "keywords": ["android", "ios", "iphone", "ipad", "swift", "swiftui", "flutter", "harmonyos", "openharmony", "arkts", "uniapp", "uni-app", "electron", "tauri", "wails", "desktop", "安卓", "鸿蒙", "小程序", "桌面", "客户端"],
+      "languages": ["Swift", "Dart", "Objective-C", "ArkTS"]
+    },
+    {
+      "name": "🏃 生活与数据",
+      "description": "运动健康、个人数据可视化、记账理财与生活",
+      "topics": ["running", "fitness", "health", "apple-health", "healthkit", "apple-watch", "strava", "garmin", "keep", "nike-run-club", "workout", "sports", "cycling", "swimming", "poster", "github-poster", "quantified-self", "personal-data", "finance", "personal-finance", "accounting", "bill", "bills", "budget", "ledger", "beancount", "stock", "stocks", "fund", "investment", "travel", "food", "recipe", "recipes", "cooking", "diary", "journal"],
+      "keywords": ["running", "sports", "fitness", "health", "strava", "garmin", "workout", "poster", "heatmap", "finance", "budget", "beancount", "travel", "recipe", "diary", "journal", "跑步", "运动", "健身", "健康", "骑行", "游泳", "海报", "热力图", "记账", "账单", "理财", "基金", "股票", "旅行", "旅游", "菜谱", "做饭", "日记", "生活", "豆瓣"]
+    },
+    {
+      "name": "🎮 游戏开发",
+      "description": "游戏服务端、引擎与游戏相关工具",
+      "topics": ["game", "games", "game-server", "gameserver", "game-development", "gamedev", "game-engine", "unity", "unity3d", "godot", "unreal", "unreal-engine", "cocos", "cocos-creator", "mmorpg", "pixel-art", "emulator", "minecraft", "steam"],
+      "keywords": ["game", "games", "gamedev", "unity", "godot", "cocos", "mmorpg", "steam", "游戏", "防沉迷"]
+    },
+    {
+      "name": "🐹 Go 生态",
+      "description": "其他 Go 框架、库与工具",
+      "topics": ["go-library", "golang-library", "gin", "gin-gonic", "echo", "fiber", "kratos", "go-kratos", "go-zero", "gorm", "cobra", "viper", "zap"],
+      "keywords": ["golang", "gin", "gorm", "kratos", "go-zero", "go 语言", "go语言"],
+      "languages": ["Go"]
+    },
+    {
+      "name": "☕ Java / Kotlin",
+      "description": "其他 JVM 生态：Java、Kotlin、Spring 等",
+      "topics": ["spring", "spring-boot", "springboot", "spring-cloud", "jvm", "maven", "gradle", "netty", "mybatis"],
+      "keywords": ["java", "kotlin", "spring", "spring boot", "springboot", "jvm", "netty", "mybatis"],
+      "languages": ["Java", "Kotlin", "Scala", "Groovy"]
+    }
+  ],
+  "fallback": {
+    "name": "🗂️ 其他",
+    "description": "规则没覆盖到的"
+  },
+  "overrides": {}
+}

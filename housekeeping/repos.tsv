@@ -1,0 +1,71 @@
+# 公开仓库清理计划（2026-09-26 盘点）。格式：动作  仓库名  理由
+# 动作：delete 删除 · archive 归档（只读，链接 / raw 图片 / go get 照常可用）
+#       private 转私有 · private+archive 转私有并归档 · keep 保留（脚本跳过）
+# 私有仓库的处理不写在这个公开文件里，需要的话放到同目录的 repos.private.tsv（已 gitignore）。
+
+# ---- 删除：fork，没有你自己的提交 ----
+delete   alibaba-cloud-sdk-go        fork，没有自己的提交
+delete   wechatpay-java              fork，没有自己的提交
+delete   combo-sdk-node              fork，没有自己的提交（要提 PR 时再 fork）
+delete   photo-blog                  exif-photo-blog 的 fork，没有自己的提交
+delete   jshERP                      fork，没有自己的提交
+delete   talk                        fork，没有自己的提交
+delete   2023                        yihong0618/2023 的 fork，没有自己的提交
+delete   iBeats                      fork，心率组件已从主页移除，没有自己的提交
+delete   huntly                      fork，没有自己的提交
+delete   Whisker17                   别人主页 README 的 fork，没有自己的提交
+delete   jd_seckill                  fork，上游 2020 年后不再更新
+delete   own-info                    fork，没有自己的提交
+delete   surmon.me                   博客主题的 fork，没有自己的提交
+delete   game-server                 fork，没有自己的提交
+
+# ---- 删除：fork，改动已进上游或只有同步提交 ----
+delete   wechatpay-go                改动已合入上游（#224）
+delete   wlc                         改动已合入上游（#5）
+delete   id-validator                两个提交已在上游
+delete   chinese-independent-blogs   提交博客收录用的 fork，已收录
+delete   2024                        yihong0618/2024 的 fork，只改过 README
+delete   GPT-Web                     NextChat 的 fork，只有同步提交；Vercel 上若还有部署一并删掉
+
+# ---- 删除：空仓库、模板、已被取代 ----
+delete   hello-world                 2019 年的 GitHub 新手教程模板
+delete   test-project                空仓库
+delete   rss                         空仓库
+delete   go-web-demo                 只有 Initial commit
+delete   Maze                        maze-client 的旧副本
+delete   kotlin-grpc-springboot-gen  1 个提交，已被 kotlin-grpc 取代
+delete   kratos-sample               kratos 练习，已被 go-template 取代
+delete   go-programming-mode         2021 年的 Go 编程模式笔记（6 个提交）
+delete   log4j2-json                 log4j2 JSON 日志格式 demo（8 个提交）
+delete   ChatGPT-Web                 2023 年的 ChatGPT 网页小玩具，已过时
+delete   proxy-rules                 2023 年的 Clash 规则快照，已过时
+delete   SportsRecord                旧版运动海报，已由 GitHubPoster 取代
+delete   blog-backup                 两篇文章的临时备份，已由 blog-data 取代；先去掉 mysql-sharding-migration.md 里指向它的链接
+
+# ---- 归档：有自己的代码或内容，不再维护 ----
+archive  pic-sync                    旧图床，11 篇博文的 37 张图还从这里加载，不能删
+archive  go-template                 kratos 微服务模板（57 个提交）
+archive  go-alipay-sdk-v3            支付宝 v3 Go SDK，归档后 go get 照常可用
+archive  alipay-sdk-v3-generator     上面这个 SDK 的生成模板
+archive  go-json-heterogeneous       Go 异构 JSON 的处理示例
+archive  kotlin-grpc                 Kotlin gRPC 模板
+archive  kotlin-netty-protobuf       Kotlin + Netty + Protobuf 项目（60 个提交）
+archive  maze-server                 多人迷宫服务端（Kotlin + Netty）
+archive  maze-client                 多人迷宫客户端
+archive  leet-code-practice          2020–2023 年的刷题记录
+archive  reading-notes               2024 年的读书笔记，博客已经有阅读清单
+private+archive  Notes               旧 Obsidian 库（PMP、架构笔记），已换新 vault，转私有留底
+
+# ---- 保留 ----
+keep     whrss9527                   主页
+keep     goblog                      博客程序
+keep     blog-data                   博客内容
+keep     blog-comments               giscus 评论存在它的 Discussions 里
+keep     GitHubPoster                生成主页的运动海报
+keep     proxyswitch                 在用
+keep     proxyswitch-mac             在用
+keep     ruankao-simulator           在用
+keep     My-illness-record           在用
+keep     combo-sdk-go                工作 SDK 的 fork，用来提 PR，还有进行中的分支
+keep     go-retryablehttp            有 5 个上游没有的提交（context 日志），一直在同步上游
+keep     edgetunnel                  Cloudflare 上如果已经不用了，改成 delete
