@@ -2,7 +2,7 @@
 
 ### 你好，我是了迹奇有没 👋
 
-在北京写后端，也给 Mac 做些顺手的小工具。<br>
+服务端工程师，也给 Mac 做些顺手的小工具。<br>
 最近的四个都住在菜单栏里：原生 Swift，玻璃质感，开源免费。
 
 [博客](https://whrss.com) · [RSS](https://whrss.com/feed) · [邮箱](mailto:whrss9527@gmail.com)
