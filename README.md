@@ -23,8 +23,8 @@
 **最近发布**
 
 <!-- RELEASES:START -->
+- <img src="assets/icons/stox.png" width="16" height="16" align="top" alt=""> [Stox v0.44.0](https://github.com/whrss9527/stox/releases/tag/v0.44.0) · 2026-09-29
 - <img src="assets/icons/pop.png" width="16" height="16" align="top" alt=""> [Pop v0.4.0](https://github.com/whrss9527/pop/releases/tag/v0.4.0) · 2026-09-29
-- <img src="assets/icons/stox.png" width="16" height="16" align="top" alt=""> [Stox v0.43.0](https://github.com/whrss9527/stox/releases/tag/v0.43.0) · 2026-09-29
 - <img src="assets/icons/meno.png" width="16" height="16" align="top" alt=""> [Meno v0.1.1](https://github.com/whrss9527/meno/releases/tag/v0.1.1) · 2026-09-29
 - <img src="assets/icons/proxi.png" width="16" height="16" align="top" alt=""> [Proxi v0.11.0](https://github.com/whrss9527/proxi/releases/tag/v0.11.0) · 2026-09-29
 <!-- RELEASES:END -->
