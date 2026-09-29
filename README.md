@@ -86,12 +86,4 @@
 
 ![我的运动数据](https://raw.githubusercontent.com/whrss9527/whrss9527/master/AppleHealthData.svg)
 
-<p align="center">
-  <img src="https://statistics-git-main-whrsss.vercel.app/api?username=whrss9527&rank_icon=github&count_private=false" alt="我的 GitHub 数据">
-</p>
 
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=whrsss" alt="Profile View Counter">
-  <a href="https://github.com/whrss9527"><img src="https://img.shields.io/badge/dynamic/json?logo=github&label=GitHub&labelColor=495867&color=495867&query=%24.data.totalSubs&url=https%3A%2F%2Fapi.spencerwoo.com%2Fsubstats%2F%3Fsource%3Dgithub%26queryKey%3Dwhrss9527&style=flat-square" alt="GitHub"></a>
-  <a href="https://whrss.com/"><img src="https://img.shields.io/badge/dynamic/json?logo=rss&logoColor=white&label=RSS&labelColor=95B8D1&color=95B8D1&query=%24.data.totalSubs&url=https%3A%2F%2Fapi.spencerwoo.com%2Fsubstats%2F%3Fsource%3Dfeedly%257Cinoreader%257CfeedsPub%26queryKey%3Dhttps://whrss.com/feed&style=flat-square" alt="RSS"></a>
-</p>
