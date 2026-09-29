@@ -10,10 +10,10 @@
 </div>
 
 <p align="center">
-  <a href="https://github.com/whrss9527/pop"><img src="assets/cards/pop.svg" width="400" hspace="2" alt="Pop：长按右键，一划即达"></a>
-  <a href="https://github.com/whrss9527/meno"><img src="assets/cards/meno.svg" width="400" hspace="2" alt="Meno：安静的菜单栏，由玻璃打造"></a>
-  <a href="https://github.com/whrss9527/stox"><img src="assets/cards/stox.svg" width="400" hspace="2" alt="Stox：一眼看盘，一键隐身"></a>
-  <a href="https://github.com/whrss9527/proxi"><img src="assets/cards/proxi.svg" width="400" hspace="2" alt="Proxi：一个开关，管好所有代理"></a>
+  <a href="https://github.com/whrss9527/pop"><img src="assets/cards/pop.svg" width="23%" alt="Pop：长按右键，一划即达" title="选中外文即翻译，算式、颜色、图片直接出结果"></a>
+  <a href="https://github.com/whrss9527/meno"><img src="assets/cards/meno.svg" width="23%" alt="Meno：安静的菜单栏，由玻璃打造" title="收起不常用的图标，点按、悬停或轻扫即可唤回"></a>
+  <a href="https://github.com/whrss9527/stox"><img src="assets/cards/stox.svg" width="23%" alt="Stox：一眼看盘，一键隐身" title="A 股、港股、美股行情，压缩包不到 1 MB"></a>
+  <a href="https://github.com/whrss9527/proxi"><img src="assets/cards/proxi.svg" width="23%" alt="Proxi：一个开关，管好所有代理" title="系统代理、环境变量、git、npm，一键切换"></a>
 </p>
 
 <table>
