@@ -1,9 +1,9 @@
-name: Update blog posts
+name: Update releases
 
 on:
   schedule:
-    # 09:17 Beijing time
-    - cron: "17 1 * * *"
+    # every 6 hours; the apps ship often, so a daily refresh would lag
+    - cron: "47 */6 * * *"
   workflow_dispatch:
 
 permissions:
@@ -16,14 +16,16 @@ jobs:
       - uses: actions/checkout@v7
 
       - name: Update README
-        run: python3 .github/scripts/update_blog_posts.py
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 .github/scripts/update_releases.py
 
       - name: Commit and push
         run: |
           git diff --quiet README.md && exit 0
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "Update latest blog posts" README.md
-          # the poster and releases workflows also push to master
+          git commit -m "Update latest releases" README.md
+          # the poster and blog workflows also push to master
           git pull --rebase
           git push

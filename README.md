@@ -1,35 +1,57 @@
+<div align="center">
+
+### 你好，我是了迹奇有没 👋
+
+在北京写后端，也给 Mac 做些顺手的小工具。<br>
+最近的四个都住在菜单栏里：原生 Swift，玻璃质感，开源免费。
+
+[博客](https://whrss.com) · [RSS](https://whrss.com/feed) · [邮箱](mailto:whrss9527@gmail.com)
+
+</div>
+
+<p align="center">
+  <a href="https://github.com/whrss9527/pop"><img src="assets/cards/pop.svg" width="400" hspace="2" alt="Pop：长按右键，一划即达"></a>
+  <a href="https://github.com/whrss9527/meno"><img src="assets/cards/meno.svg" width="400" hspace="2" alt="Meno：安静的菜单栏，由玻璃打造"></a>
+  <a href="https://github.com/whrss9527/stox"><img src="assets/cards/stox.svg" width="400" hspace="2" alt="Stox：一眼看盘，一键隐身"></a>
+  <a href="https://github.com/whrss9527/proxi"><img src="assets/cards/proxi.svg" width="400" hspace="2" alt="Proxi：一个开关，管好所有代理"></a>
+</p>
+
 <table>
 <tr>
-<td>
+<td width="50%" valign="top">
 
+**最近发布**
 
-![我的 GitHub 数据](https://statistics-git-main-whrsss.vercel.app/api?username=whrss9527&rank_icon=github&count_private=false)
-
-
-
-![Profile View Counter](https://komarev.com/ghpvc/?username=whrsss)
-[![GitHub](https://img.shields.io/badge/dynamic/json?logo=github&label=GitHub&labelColor=495867&color=495867&query=%24.data.totalSubs&url=https%3A%2F%2Fapi.spencerwoo.com%2Fsubstats%2F%3Fsource%3Dgithub%26queryKey%3Dwhrss9527&style=flat-square)](https://github.com/whrss9527)
-[![RSS](https://img.shields.io/badge/dynamic/json?logo=rss&logoColor=white&label=RSS&labelColor=95B8D1&color=95B8D1&query=%24.data.totalSubs&url=https%3A%2F%2Fapi.spencerwoo.com%2Fsubstats%2F%3Fsource%3Dfeedly%257Cinoreader%257CfeedsPub%26queryKey%3Dhttps://whrss.com/feed&style=flat-square)](https://whrss.com/)
+<!-- RELEASES:START -->
+- <img src="assets/icons/pop.png" width="16" height="16" align="top" alt=""> [Pop v0.4.0](https://github.com/whrss9527/pop/releases/tag/v0.4.0) · 2026-09-29
+- <img src="assets/icons/stox.png" width="16" height="16" align="top" alt=""> [Stox v0.43.0](https://github.com/whrss9527/stox/releases/tag/v0.43.0) · 2026-09-29
+- <img src="assets/icons/meno.png" width="16" height="16" align="top" alt=""> [Meno v0.1.1](https://github.com/whrss9527/meno/releases/tag/v0.1.1) · 2026-09-29
+- <img src="assets/icons/proxi.png" width="16" height="16" align="top" alt=""> [Proxi v0.11.0](https://github.com/whrss9527/proxi/releases/tag/v0.11.0) · 2026-09-29
+<!-- RELEASES:END -->
 
 </td>
-<td>
-  
-  ![go](https://user-images.githubusercontent.com/54488712/217738525-f9d63cf6-f383-49e1-ba70-aef0e5978c08.png)
+<td width="50%" valign="top">
 
+**最新文章**
 
-- ⚡ Go / Kotlin / JAVA / Shell / JavaScript / CI & CD / ..
-- ✍️ [Blogger](https://whrss.com)
-- 📫 [![Gmail Badge](https://img.shields.io/badge/-Gmail-c14438?style=flat-square&logo=Gmail&logoColor=white)](mailto:whrss9527@gmail.com)
+<!-- BLOG-POSTS:START -->
+- [给博客做了一轮大改：多端、离线、服务端渲染和一堆小东西](https://whrss.com/posts/goblog-refactor)
+- [一致性事务：从 2PC 到 Outbox pattern](https://whrss.com/posts/transaction-consistency-patterns-2pc-outbox)
+- [鸿蒙 OS 的签名密钥机制，我终于整明白了！](https://whrss.com/posts/harmonyos-signing-key)
+- [数据库分表实践：如何优雅地切换到分表架构](https://whrss.com/posts/mysql-sharding-migration)
+- [“该省省，该花花”](https://whrss.com/posts/smart-spending)
+<!-- BLOG-POSTS:END -->
 
 </td>
 </tr>
 </table>
 
-### 💻Tech Stack
+### 技术栈
 
 <!-- Languages -->
 ![Go](https://img.shields.io/badge/Go-%2300ADD8.svg?style=for-the-badge&logo=go&logoColor=white)
 ![Kotlin](https://img.shields.io/badge/Kotlin-%237F52FF.svg?style=for-the-badge&logo=kotlin&logoColor=white)
+![Swift](https://img.shields.io/badge/Swift-%23F05138.svg?style=for-the-badge&logo=swift&logoColor=white)
 ![Java](https://img.shields.io/badge/Java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-%233776AB.svg?style=for-the-badge&logo=python&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
@@ -58,19 +80,18 @@
 ![Obsidian](https://img.shields.io/badge/Obsidian-%237C3AED.svg?style=for-the-badge&logo=obsidian&logoColor=white)
 ![Claude](https://img.shields.io/badge/Claude-%23D97757.svg?style=for-the-badge&logo=claude&logoColor=white)
 
----
+### 我的运动
 
-#### 最新文章([whrss.com](https://whrss.com)，每天自动更新)
-
-<!-- BLOG-POSTS:START -->
-- [给博客做了一轮大改：多端、离线、服务端渲染和一堆小东西](https://whrss.com/posts/goblog-refactor)
-- [一致性事务：从 2PC 到 Outbox pattern](https://whrss.com/posts/transaction-consistency-patterns-2pc-outbox)
-- [鸿蒙 OS 的签名密钥机制，我终于整明白了！](https://whrss.com/posts/harmonyos-signing-key)
-- [数据库分表实践：如何优雅地切换到分表架构](https://whrss.com/posts/mysql-sharding-migration)
-- [“该省省，该花花”](https://whrss.com/posts/smart-spending)
-<!-- BLOG-POSTS:END -->
-
-#### 我的运动([github action 自动更新](https://whrss.com/posts/github-poster))
+<sub>数据来自 Apple 健康，[GitHub Action 自动更新](https://whrss.com/posts/github-poster)</sub>
 
 ![我的运动数据](https://raw.githubusercontent.com/whrss9527/whrss9527/master/AppleHealthData.svg)
----
+
+<p align="center">
+  <img src="https://statistics-git-main-whrsss.vercel.app/api?username=whrss9527&rank_icon=github&count_private=false" alt="我的 GitHub 数据">
+</p>
+
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=whrsss" alt="Profile View Counter">
+  <a href="https://github.com/whrss9527"><img src="https://img.shields.io/badge/dynamic/json?logo=github&label=GitHub&labelColor=495867&color=495867&query=%24.data.totalSubs&url=https%3A%2F%2Fapi.spencerwoo.com%2Fsubstats%2F%3Fsource%3Dgithub%26queryKey%3Dwhrss9527&style=flat-square" alt="GitHub"></a>
+  <a href="https://whrss.com/"><img src="https://img.shields.io/badge/dynamic/json?logo=rss&logoColor=white&label=RSS&labelColor=95B8D1&color=95B8D1&query=%24.data.totalSubs&url=https%3A%2F%2Fapi.spencerwoo.com%2Fsubstats%2F%3Fsource%3Dfeedly%257Cinoreader%257CfeedsPub%26queryKey%3Dhttps://whrss.com/feed&style=flat-square" alt="RSS"></a>
+</p>
