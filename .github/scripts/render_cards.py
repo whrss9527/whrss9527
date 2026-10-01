@@ -4,13 +4,14 @@ Run it again after changing a tile's text or colors:
 
     python3 .github/scripts/render_cards.py
 
-GitHub shows README images through <img>, which blocks anything an SVG loads from
-elsewhere, so each tile embeds its icon and uses only system fonts. The README sizes
-the tiles as a share of the page width to keep them in one row; when a tile ends up
-narrower than 120px (phones), it keeps only its icon and name.
+Each tile shows its app's latest version from releases.json next to this script, which
+update_releases.py refreshes before rendering the tiles again. The README sizes the
+tiles at a quarter of the page width each, so the row spans the page in any window; when a
+tile ends up narrower than 120px (phones), it keeps only its icon and name.
 """
 
 import base64
+import json
 import math
 import struct
 import zlib
@@ -18,22 +19,21 @@ from dataclasses import dataclass
 from pathlib import Path
 from xml.sax.saxutils import escape, quoteattr
 
+from glass import MARGIN, MONO, ROW_WIDTH, SANS, background, defs, rim
+
 ROOT = Path(__file__).resolve().parents[2]
 ICONS = ROOT / "assets" / "icons"
 CARDS = ROOT / "assets" / "cards"
+RELEASES = Path(__file__).with_name("releases.json")
 
-WIDTH, HEIGHT = 206, 156
-MARGIN = 3  # transparent edge, so tiles side by side keep a gap
+WIDTH, HEIGHT = ROW_WIDTH // 4, 156
 RADIUS = 16
 PAD = 16
 ICON = 56  # visible size of the icon's rounded square
 LEFT, TOP = MARGIN + PAD, MARGIN + PAD
 RIGHT = WIDTH - MARGIN - PAD
 NAME_Y, TAGLINE_Y = TOP + ICON + 31, TOP + ICON + 53  # baselines
-FONTS = (
-    '-apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", '
-    '"Microsoft YaHei", "Noto Sans CJK SC", "Noto Sans SC", "WenQuanYi Micro Hei", sans-serif'
-)
+PILL = 9.5  # font size of the version in the pill
 
 
 @dataclass
@@ -85,23 +85,6 @@ CARDS_DATA = [
         motif="toggle",
     ),
 ]
-
-
-def text_width(text, size):
-    """Rough advance width; the platform label is centered, so small errors only shift the padding."""
-    width = 0.0
-    for char in text:
-        if ord(char) > 0x2E80:
-            width += 1.0
-        elif char == " ":
-            width += 0.3
-        elif char.isupper():
-            width += 0.66
-        elif char.isdigit() or char in "+-":
-            width += 0.6
-        else:
-            width += 0.54
-    return width * size
 
 
 def opaque_bounds(png):
@@ -221,53 +204,42 @@ def toggle_motif():
 MOTIFS = {"ring": ring_motif, "glass": glass_motif, "chart": chart_motif, "toggle": toggle_motif}
 
 
-def render(card):
+def render(card, version):
     png = (ICONS / f"{card.slug}.png").read_bytes()
     box = ICON / opaque_bounds(png)
     icon_x, icon_y = LEFT - (box - ICON) / 2, TOP - (box - ICON) / 2
     icon = base64.b64encode(png).decode()
 
-    glows = "".join(
-        f'<circle cx="{cx}" cy="{cy}" r="{r}" fill="{color}" fill-opacity="{opacity}" filter="url(#glow)"/>'
-        for color, cx, cy, r, opacity in card.glows
-    )
-    platform_width = text_width(card.platform, 9.5) + 14
-    platform_x = RIGHT - platform_width
-    tile_w, tile_h = WIDTH - 2 * MARGIN, HEIGHT - 2 * MARGIN
+    # the version is set in a monospace font, ~0.6em per character; centered, so a font
+    # with narrower digits only shifts the padding
+    label = version or card.platform
+    pill_width = len(label) * PILL * 0.6 + 14
+    pill_x = RIGHT - pill_width
 
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{WIDTH}" height="{HEIGHT}" viewBox="0 0 {WIDTH} {HEIGHT}" role="img" aria-label={quoteattr(f"{card.name}：{card.tagline}")}>
 <title>{escape(card.name)} · {escape(card.tagline)}</title>
 <defs>
-<clipPath id="tile"><rect x="{MARGIN}" y="{MARGIN}" width="{tile_w}" height="{tile_h}" rx="{RADIUS}"/></clipPath>
-<linearGradient id="base" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="{card.base[0]}"/><stop offset="1" stop-color="{card.base[1]}"/></linearGradient>
-<linearGradient id="sheen" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF" stop-opacity="0.10"/><stop offset="0.55" stop-color="#FFFFFF" stop-opacity="0"/></linearGradient>
-<linearGradient id="rim" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF" stop-opacity="0.34"/><stop offset="0.5" stop-color="#FFFFFF" stop-opacity="0.10"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0.06"/></linearGradient>
-<filter id="glow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="24"/></filter>
+{defs(WIDTH, HEIGHT, RADIUS, card.base)}
 <filter id="soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="7"/></filter>
 <filter id="lift" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#000000" flood-opacity="0.35"/></filter>
 <style>
-text {{ font-family: {FONTS}; fill: #FFFFFF; }}
+text {{ font-family: {SANS}; fill: #FFFFFF; }}
 .name {{ font-size: 21px; font-weight: 700; letter-spacing: -0.2px; }}
 .tagline {{ font-size: 12.5px; font-weight: 500; fill-opacity: 0.9; }}
-.platform {{ font-size: 9.5px; font-weight: 500; fill-opacity: 0.66; }}
+.version {{ font-family: {MONO}; font-size: {PILL}px; font-weight: 500; fill-opacity: 0.72; }}
 @media (max-width: 120px) {{
   .detail {{ display: none; }}
   .name {{ font-size: 30px; transform: translateY(18px); }}
 }}
 </style>
 </defs>
-<g clip-path="url(#tile)">
-<rect x="{MARGIN}" y="{MARGIN}" width="{tile_w}" height="{tile_h}" fill="url(#base)"/>
-{glows}
-<g class="detail">{MOTIFS[card.motif]()}</g>
-<rect x="{MARGIN}" y="{MARGIN}" width="{tile_w}" height="{tile_h}" fill="url(#sheen)"/>
-</g>
-<rect x="{MARGIN + 0.5}" y="{MARGIN + 0.5}" width="{tile_w - 1}" height="{tile_h - 1}" rx="{RADIUS - 0.5}" fill="none" stroke="url(#rim)"/>
+{background(WIDTH, HEIGHT, card.glows, inner=f'<g class="detail">{MOTIFS[card.motif]()}</g>')}
+{rim(WIDTH, HEIGHT, RADIUS)}
 <image x="{icon_x:.2f}" y="{icon_y:.2f}" width="{box:.2f}" height="{box:.2f}" filter="url(#lift)" href="data:image/png;base64,{icon}"/>
 <text x="{LEFT}" y="{NAME_Y}" class="name">{escape(card.name)}</text>
 <g class="detail">
-<rect x="{platform_x:.1f}" y="{NAME_Y - 14.5}" width="{platform_width:.1f}" height="17" rx="8.5" fill="#FFFFFF" fill-opacity="0.07" stroke="#FFFFFF" stroke-opacity="0.2"/>
-<text x="{platform_x + platform_width / 2:.1f}" y="{NAME_Y - 2.8}" text-anchor="middle" class="platform">{escape(card.platform)}</text>
+<rect x="{pill_x:.1f}" y="{NAME_Y - 14.5}" width="{pill_width:.1f}" height="17" rx="8.5" fill="#FFFFFF" fill-opacity="0.07" stroke="#FFFFFF" stroke-opacity="0.2"/>
+<text x="{pill_x + pill_width / 2:.1f}" y="{NAME_Y - 2.9}" text-anchor="middle" class="version">{escape(label)}</text>
 <text x="{LEFT}" y="{TAGLINE_Y}" class="tagline">{escape(card.tagline)}</text>
 </g>
 </svg>
@@ -275,9 +247,10 @@ text {{ font-family: {FONTS}; fill: #FFFFFF; }}
 
 
 def main():
+    releases = json.loads(RELEASES.read_text(encoding="utf-8")) if RELEASES.exists() else {}
     CARDS.mkdir(parents=True, exist_ok=True)
     for card in CARDS_DATA:
-        (CARDS / f"{card.slug}.svg").write_text(render(card), encoding="utf-8")
+        (CARDS / f"{card.slug}.svg").write_text(render(card, releases.get(card.slug)), encoding="utf-8")
         print(f"assets/cards/{card.slug}.svg")
 
 

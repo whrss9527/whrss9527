@@ -21,12 +21,25 @@ def fetch_posts():
     entries = feed.findall(ATOM + "entry")[:POST_COUNT]
     if not entries:
         raise SystemExit("feed has no entries, README left unchanged")
-    return [(entry.findtext(ATOM + "title"), entry.find(ATOM + "link").get("href")) for entry in entries]
+    return [
+        (entry.findtext(ATOM + "title"), entry.find(ATOM + "link").get("href"), entry.findtext(ATOM + "published"))
+        for entry in entries
+    ]
 
 
 def render(posts):
-    # slugs can contain spaces or "&" (e.g. "cloudflare-tunnel "), so encode links for Markdown
-    return "".join(f"- [{title}]({urllib.parse.quote(link, safe=':/&%')})\n" for title, link in posts)
+    """One post per line, without list bullets, so the lines start at the page's left edge.
+
+    Atom makes <published> optional; the lines carry dates only when every post has one.
+    """
+    dated = all(published for _, _, published in posts)
+    lines = []
+    for title, link, published in posts:
+        date = f"`{published[:10]}` " if dated else ""
+        title = title.replace("[", r"\[").replace("]", r"\]")
+        # slugs can contain spaces or "&" (e.g. "cloudflare-tunnel "), so encode links for Markdown
+        lines.append(f"{date}[{title}]({urllib.parse.quote(link, safe=':/&%')})")
+    return "<br>\n".join(lines) + "\n"
 
 
 def main():
