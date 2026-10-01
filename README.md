@@ -13,11 +13,11 @@
 #### 最新文章
 
 <!-- BLOG-POSTS:START -->
-- [给博客做了一轮大改：多端、离线、服务端渲染和一堆小东西](https://blog.whrss.com/posts/goblog-refactor)
-- [一致性事务：从 2PC 到 Outbox pattern](https://blog.whrss.com/posts/transaction-consistency-patterns-2pc-outbox)
-- [鸿蒙 OS 的签名密钥机制，我终于整明白了！](https://blog.whrss.com/posts/harmonyos-signing-key)
-- [数据库分表实践：如何优雅地切换到分表架构](https://blog.whrss.com/posts/mysql-sharding-migration)
-- [“该省省，该花花”](https://blog.whrss.com/posts/smart-spending)
+- [给博客做了一轮大改：多端、离线、服务端渲染和一堆小东西](https://whrss.com/posts/goblog-refactor)
+- [一致性事务：从 2PC 到 Outbox pattern](https://whrss.com/posts/transaction-consistency-patterns-2pc-outbox)
+- [鸿蒙 OS 的签名密钥机制，我终于整明白了！](https://whrss.com/posts/harmonyos-signing-key)
+- [数据库分表实践：如何优雅地切换到分表架构](https://whrss.com/posts/mysql-sharding-migration)
+- [“该省省，该花花”](https://whrss.com/posts/smart-spending)
 <!-- BLOG-POSTS:END -->
 
 <a href="https://raw.githubusercontent.com/whrss9527/whrss9527/master/AppleHealthData.svg"><img src="assets/activity.svg" width="100%" alt="活动能量：Apple 健康里每天的活动消耗，2021 年起每年一行、每周一格，点开是逐日热力图"></a>
