@@ -1,4 +1,4 @@
-name: Update releases
+name: Update app versions
 
 on:
   schedule:
@@ -15,17 +15,18 @@ jobs:
     steps:
       - uses: actions/checkout@v7
 
-      - name: Update README
+      - name: Update the project cards
         env:
           GITHUB_TOKEN: ${{ github.token }}
         run: python3 .github/scripts/update_releases.py
 
       - name: Commit and push
         run: |
-          git diff --quiet README.md && exit 0
+          git add .github/scripts/releases.json assets/cards
+          git diff --cached --quiet && exit 0
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "Update latest releases" README.md
+          git commit -m "Update app versions"
           # the poster and blog workflows also push to master
           git pull --rebase
           git push
