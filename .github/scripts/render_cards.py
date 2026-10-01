@@ -78,7 +78,7 @@ CARDS_DATA = [
     Card(
         slug="proxi",
         name="Proxi",
-        tagline="一个开关，管好所有代理",
+        tagline="开发者的代理开关",
         platform="macOS 14+",
         base=("#10275A", "#081330"),
         glows=[("#2F6BEA", 28, 22, 70, 0.60), ("#22C55E", 200, 150, 70, 0.28)],
