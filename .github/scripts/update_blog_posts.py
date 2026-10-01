@@ -1,11 +1,11 @@
-"""Refresh the latest-posts section of README.md from the whrss.com Atom feed."""
+"""Refresh the latest-posts section of README.md from the blog.whrss.com Atom feed."""
 
 import re
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
 
-FEED_URL = "https://whrss.com/feed"
+FEED_URL = "https://blog.whrss.com/feed"
 README_PATH = "README.md"
 POST_COUNT = 5
 ATOM = "{http://www.w3.org/2005/Atom}"
