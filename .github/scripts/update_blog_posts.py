@@ -28,18 +28,19 @@ def fetch_posts():
 
 
 def render(posts):
-    """One post per line, without list bullets, so the lines start at the page's left edge.
+    """One post per line, each opening with a mark, so a title that wraps on a phone still reads as one.
 
-    Atom makes <published> optional; the lines carry dates only when every post has one.
+    Atom makes <published> optional. When every post has one, the date is the mark and the lines
+    start flush with the page, like git log; otherwise they fall back to a bulleted list.
     """
     dated = all(published for _, _, published in posts)
     lines = []
     for title, link, published in posts:
-        date = f"`{published[:10]}` " if dated else ""
         title = title.replace("[", r"\[").replace("]", r"\]")
         # slugs can contain spaces or "&" (e.g. "cloudflare-tunnel "), so encode links for Markdown
-        lines.append(f"{date}[{title}]({urllib.parse.quote(link, safe=':/&%')})")
-    return "<br>\n".join(lines) + "\n"
+        post = f"[{title}]({urllib.parse.quote(link, safe=':/&%')})"
+        lines.append(f"`{published[:10]}` {post}" if dated else f"- {post}")
+    return ("<br>\n" if dated else "\n").join(lines) + "\n"
 
 
 def main():

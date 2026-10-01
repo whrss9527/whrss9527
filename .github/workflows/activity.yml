@@ -1,0 +1,40 @@
+name: Update activity panel
+
+on:
+  push:
+    branches: [master]
+    # the health data repository pushes AppleHealthData.svg a few times a day
+    paths:
+      - AppleHealthData.svg
+      - .github/scripts/render_activity.py
+      - .github/scripts/glass.py
+  schedule:
+    # in case a push from the health data repository doesn't start a run
+    - cron: "7 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: activity-panel
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Render the panel
+        run: python3 .github/scripts/render_activity.py
+
+      - name: Commit and push
+        run: |
+          git add assets/activity.svg
+          git diff --cached --quiet && exit 0
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Update activity panel"
+          # the poster, releases and blog workflows also push to master
+          git pull --rebase
+          git push
