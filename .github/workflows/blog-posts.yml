@@ -2,12 +2,16 @@ name: Update blog posts
 
 on:
   schedule:
-    # 09:17 Beijing time
-    - cron: "17 1 * * *"
+    # hourly, half an hour after the blog's own hourly deploy (:23); the README is only
+    # committed when the latest posts changed, so the quiet hours leave no trace
+    - cron: "53 * * * *"
   workflow_dispatch:
 
 permissions:
   contents: write
+
+concurrency:
+  group: blog-posts
 
 jobs:
   update:
