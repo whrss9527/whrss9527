@@ -6,7 +6,7 @@ import urllib.request
 import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta, timezone
 
-FEED_URL = "https://blog.whrss.com/feed"
+FEED_URL = "https://blog.whrss.com/feed.xml"
 README_PATH = "README.md"
 POST_COUNT = 5
 ATOM = "{http://www.w3.org/2005/Atom}"
