@@ -6,6 +6,7 @@ no app has shipped since the last run.
 
 import json
 import os
+import urllib.error
 import urllib.request
 
 import render_cards
@@ -13,17 +14,29 @@ import render_cards
 OWNER = "whrss9527"
 
 
-def latest_release(repo):
+def fetch_release_json(repo, endpoint):
     request = urllib.request.Request(
-        f"https://api.github.com/repos/{OWNER}/{repo}/releases?per_page=10",
+        f"https://api.github.com/repos/{OWNER}/{repo}/{endpoint}",
         headers={"Accept": "application/vnd.github+json", "User-Agent": "whrss9527-profile-readme"},
     )
     token = os.environ.get("GITHUB_TOKEN")
     if token:
         request.add_header("Authorization", f"Bearer {token}")
     with urllib.request.urlopen(request, timeout=30) as response:
-        releases = [release for release in json.load(response) if not release["draft"]]
-    # count prereleases too: Pop shipped only betas at first, and /releases/latest skips them
+        return json.load(response)
+
+
+def latest_release(repo):
+    # Match the cards' stable download links, even when a newer beta exists.
+    try:
+        return fetch_release_json(repo, "releases/latest")
+    except urllib.error.HTTPError as error:
+        if error.code != 404:
+            raise
+
+    # A new app may have only prereleases; keep its card useful until its first stable release.
+    releases = [release for release in fetch_release_json(repo, "releases?per_page=10")
+                if not release["draft"]]
     return max(releases, key=lambda release: release["published_at"], default=None)
 
 
