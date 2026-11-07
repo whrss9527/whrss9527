@@ -6,9 +6,16 @@
 <p align="center">
   <a href="https://github.com/whrss9527/pop"><img src="assets/cards/pop.svg" width="25%" alt="Pop：长按右键，一划即达" title="选中外文即翻译，算式、颜色、图片直接出结果 · macOS 15+"></a><!--
 --><a href="https://github.com/whrss9527/meno"><img src="assets/cards/meno.svg" width="25%" alt="Meno：安静的菜单栏，由玻璃打造" title="收起不常用的图标，点按、悬停或轻扫即可唤回 · macOS 14+"></a><!--
---><a href="https://github.com/whrss9527/stox"><img src="assets/cards/stox.svg" width="25%" alt="Stox：一眼看盘，一键隐身" title="A 股、港股、美股行情，压缩包不到 1 MB · macOS 13+"></a><!--
+--><a href="https://github.com/whrss9527/stox"><img src="assets/cards/stox.svg" width="25%" alt="Stox：一眼看盘，一键隐身" title="A 股、港股、美股行情，持仓盈亏与价格提醒 · macOS 13+"></a><!--
 --><a href="https://github.com/whrss9527/proxi"><img src="assets/cards/proxi.svg" width="25%" alt="Proxi：开发者的代理开关" title="系统代理、终端、git、npm 指向你自己的代理服务器，一键切换 · macOS 14+"></a>
 </p>
+
+| 应用 | 用来做什么 | 系统要求 | 入口 |
+| --- | --- | --- | --- |
+| [Pop](https://github.com/whrss9527/pop) | 选中文字，长按右键打开翻译、处理文字等工具 | macOS 15+ | [使用说明](https://whrss.com/zh/pop/) · [下载稳定版](https://github.com/whrss9527/pop/releases/latest) |
+| [Meno](https://github.com/whrss9527/meno) | 收起菜单栏图标，按需唤回，保存不同场景 | macOS 14+ | [使用说明](https://whrss.com/zh/meno/) · [下载稳定版](https://github.com/whrss9527/meno/releases/latest) |
+| [Stox](https://github.com/whrss9527/stox) | 菜单栏行情、持仓盈亏和价格提醒 | macOS 13+ | [使用说明](https://whrss.com/zh/stox/) · [下载稳定版](https://github.com/whrss9527/stox/releases/latest) |
+| [Proxi](https://github.com/whrss9527/proxi) | 按配置切换系统、终端、git 和 npm 的代理 | macOS 14+ | [使用说明](https://whrss.com/zh/proxi/) · [下载稳定版](https://github.com/whrss9527/proxi/releases/latest) |
 
 #### 最新文章
 
