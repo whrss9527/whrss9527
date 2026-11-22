@@ -17,6 +17,34 @@
 | [Stox](https://github.com/whrss9527/stox) | 菜单栏行情、持仓盈亏和价格提醒 | macOS 13+ | [使用说明](https://whrss.com/zh/stox/) · [下载稳定版](https://github.com/whrss9527/stox/releases/latest) |
 | [Proxi](https://github.com/whrss9527/proxi) | 按配置切换系统、终端、git 和 npm 的代理 | macOS 14+ | [使用说明](https://whrss.com/zh/proxi/) · [下载稳定版](https://github.com/whrss9527/proxi/releases/latest) |
 
+<p align="center">
+  <a href="https://github.com/whrss9527"><img height="150" src="https://github-readme-stats.vercel.app/api?username=whrss9527&show_icons=true&theme=transparent&hide_title=true&hide_border=true&include_all_commits=true&count_private=true" alt="GitHub Stats"></a>
+  <a href="https://github.com/whrss9527"><img height="150" src="https://github-readme-stats.vercel.app/api/top-langs/?username=whrss9527&layout=compact&theme=transparent&hide_title=true&hide_border=true&langs_count=6" alt="Top Languages"></a>
+</p>
+
+#### 技术栈
+
+<p align="center">
+  <img alt="Swift" src="https://img.shields.io/badge/Swift-F05138?logo=swift&logoColor=white">
+  <img alt="Go" src="https://img.shields.io/badge/Go-00ADD8?logo=go&logoColor=white">
+  <img alt="Kotlin" src="https://img.shields.io/badge/Kotlin-7F52FF?logo=kotlin&logoColor=white">
+  <img alt="Java" src="https://img.shields.io/badge/Java-ED8B00?logo=openjdk&logoColor=white">
+  <img alt="Python" src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white">
+  <img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black">
+  <br>
+  <img alt="Docker" src="https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white">
+  <img alt="Kubernetes" src="https://img.shields.io/badge/Kubernetes-326CE5?logo=kubernetes&logoColor=white">
+  <img alt="MySQL" src="https://img.shields.io/badge/MySQL-4479A1?logo=mysql&logoColor=white">
+  <img alt="Redis" src="https://img.shields.io/badge/Redis-DC382D?logo=redis&logoColor=white">
+  <img alt="Kafka" src="https://img.shields.io/badge/Kafka-231F20?logo=apachekafka&logoColor=white">
+  <img alt="gRPC" src="https://img.shields.io/badge/gRPC-244C5A?logo=google&logoColor=white">
+  <br>
+  <img alt="OpenTelemetry" src="https://img.shields.io/badge/OpenTelemetry-000000?logo=opentelemetry&logoColor=white">
+  <img alt="Prometheus" src="https://img.shields.io/badge/Prometheus-E6522C?logo=prometheus&logoColor=white">
+  <img alt="GitHub Actions" src="https://img.shields.io/badge/GitHub_Actions-2088FF?logo=githubactions&logoColor=white">
+  <img alt="macOS" src="https://img.shields.io/badge/macOS-000000?logo=apple&logoColor=white">
+</p>
+
 #### 最新文章
 
 <!-- BLOG-POSTS:START -->
